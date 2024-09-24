@@ -12,22 +12,10 @@ Uma **conta de armazenamento no Azure** é o contêiner que abriga diferentes ti
 O Azure oferece diferentes tipos de armazenamento para atender diversas necessidades de desempenho e custo:
 
 ### Blob Storage
-O **Blob Storage** é utilizado para armazenar grandes volumes de dados não estruturados, como imagens, vídeos, backups e arquivos de logs. Existem três tipos de blobs:
+O **Blob Storage** é utilizado para armazenar grandes volumes de dados não estruturados, como imagens, vídeos, backups e arquivos de logs.
 
-- **Blobs de blocos**: Ideais para armazenar arquivos de dados grandes, como imagens e documentos. Dividem os dados em blocos que podem ser carregados ou modificados separadamente.
-- **Blobs de anexos (Append blobs)**: Usados principalmente para logs de auditoria e arquivos que são atualizados regularmente com a adição de dados no final.
-- **Blobs de páginas**: Projetados para armazenar arquivos de acesso aleatório e são usados frequentemente como discos para máquinas virtuais.
-
-### Discos Gerenciados (Managed Disks)
-Os **Discos Gerenciados no Azure** são discos virtuais que podem ser anexados a máquinas virtuais. Eles fornecem diferentes tipos de discos para atender a uma variedade de cargas de trabalho:
-
-- **Standard HDD**: Discos baseados em HDD para cargas de trabalho leves.
-- **Standard SSD**: Melhor opção de desempenho que HDDs, usados para cargas de trabalho que requerem maior performance.
-- **Premium SSD**: Para cargas de trabalho críticas que exigem alta velocidade de leitura e gravação com baixa latência.
-- **Ultra Disk**: Para cargas de trabalho de missão crítica que demandam taxas extremamente altas de IOPS e baixa latência.
-
-### File Storage (Azure Files)
-O **Azure Files** oferece armazenamento de arquivos como um compartilhamento de rede na nuvem. Ele é compatível com os protocolos SMB e NFS, facilitando o acesso a arquivos via rede por diferentes dispositivos e sistemas operacionais. Pode ser montado em VMs do Azure ou em servidores locais, permitindo compartilhamento de dados entre várias instâncias.
+### Discos Gerenciados
+Os **Discos Gerenciados no Azure** são discos virtuais que podem ser anexados a máquinas virtuais. Eles fornecem diferentes tipos de discos para atender a uma variedade de cargas de trabalho.
 
 ### Filas
 O **Queue Storage** é um serviço que permite o armazenamento de grandes quantidades de mensagens que podem ser acessadas de forma assíncrona por diferentes componentes de uma aplicação. É ideal para o gerenciamento de tarefas ou fluxos de trabalho em larga escala, permitindo comunicação eficiente entre componentes distribuídos.
@@ -35,7 +23,7 @@ O **Queue Storage** é um serviço que permite o armazenamento de grandes quanti
 ### Tabelas
 O **Table Storage** oferece uma solução de armazenamento NoSQL para dados estruturados com esquema flexível, adequado para grandes volumes de dados, como logs, sensores e outros registros. É altamente escalável e ideal para armazenar milhões de registros de forma simples e acessível.
 
-## Classes de Acesso (Access Tiers)
+## Classes de Acesso
 O **Azure Blob Storage** oferece diferentes classes de acesso para otimizar os custos com base na frequência com que os dados são acessados:
 
 - **Hot**: Para dados acessados com frequência. Oferece o melhor desempenho, mas com custo de armazenamento mais elevado.
@@ -51,25 +39,13 @@ O Azure oferece várias opções de redundância para garantir alta disponibilid
 - **Read-Access Geo-Redundant Storage (RA-GRS)**: Oferece a mesma redundância do GRS, mas permite o acesso de leitura aos dados replicados na região secundária, aumentando a disponibilidade.
 
 ## Segurança no Armazenamento
-A segurança dos dados no Azure Storage é uma prioridade. Algumas das principais funcionalidades de segurança incluem:
-
-- **Criptografia em repouso (Encryption at Rest)**: Todos os dados armazenados no Azure são automaticamente criptografados, usando chaves gerenciadas pelo Azure ou pelo cliente.
-- **Criptografia de dados em trânsito**: Para proteger os dados enquanto eles trafegam entre o cliente e o serviço de armazenamento.
-- **Azure Active Directory (Azure AD)**: Integração para controle de acesso baseado em identidade (IAM), permitindo que os administradores definam permissões granulares para usuários e aplicações.
-- **Firewalls e redes virtuais**: Permitem restringir o acesso aos dados, garantindo que apenas endereços IP ou redes específicas possam acessar os recursos de armazenamento.
+A segurança dos dados no Azure Storage utiliza processos de criptografia.
 
 ## Gerenciamento e Monitoramento
-O Azure oferece várias ferramentas para gerenciamento e monitoramento do armazenamento, permitindo que os administradores acompanhem o desempenho e o uso:
-
-- **Azure Monitor**: Para monitorar métricas e diagnósticos de performance dos recursos de armazenamento.
-- **Azure Advisor**: Recomendações de otimização de custos e desempenho com base no uso.
-- **Azure Storage Explorer**: Uma ferramenta que permite explorar e gerenciar os dados de armazenamento localmente ou na nuvem.
+O Azure oferece várias ferramentas para gerenciamento e monitoramento do armazenamento, permitindo que os administradores acompanhem o desempenho e o uso.
 
 ## Backup e Recuperação
-O Azure fornece soluções robustas para backup e recuperação, garantindo a continuidade dos negócios:
-
-- **Azure Backup**: Para a criação de backups automáticos de VMs, bancos de dados e arquivos.
-- **Snapshots**: Para criar cópias pontuais de discos gerenciados, facilitando a recuperação rápida em caso de falhas.
+O Azure fornece soluções robustas para backup e recuperação, garantindo a integridade dos dados.
 
 ## Databox
 
